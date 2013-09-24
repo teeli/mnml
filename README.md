@@ -74,7 +74,7 @@ Below are some simple examples about setting up **mnml**. Examples directory in 
 
 ## Notes
 
-Please note that all parameters passed to the mixins must use the same unit and you can't mix for example **px** and **em** values. Safest way is to always use **px** units, even with responsive grids (don't worry, **mnml** will only use those as a base for the calculation and the output will *always* be a responsive percentage based grid)
+Please note that all parameters passed to the mixins must use the same unit and you can't mix for example **px** and **em** values. Safest way is to always use **px** or **em** units, even with responsive grids (don't worry, **mnml** will only use those as a base for the calculation and the output will *always* be a responsive percentage based grid)
 
 ## License
 
