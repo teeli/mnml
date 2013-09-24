@@ -1,0 +1,58 @@
+@import "../../scss/mnml-gs";
+
+html,body {
+    margin: 0;
+}
+
+$container-width: 950px;
+div.container {
+    width: $container-width;
+    background: url('../images/grid.png');
+    overflow: hidden;
+    margin: 0 auto;
+}
+div.responsive-container {
+    width: 100%;
+    overflow: hidden;
+}
+
+div.row {
+    // you must always set the container width for the row as pixels. 
+    // this value is only used as the base in the calculations, but should match the container size so that the grid accurately matches the container.
+    @include grid-row($container-width);
+    div.column {
+        @include grid-column();
+    }
+    div.column-6 {
+        // just set the amount of spanned columns as the first parameter. rest can be left as default, because this is part of the main grid
+        @include grid-column(6);
+    }
+    div.column-4 {
+        // just set the amount of spanned columns as the first parameter. rest can be left as default, because this is part of the main grid
+        @include grid-column(4);
+    }
+    div.column-3 {
+        // just set the amount of spanned columns as the first parameter. rest can be left as default, because this is part of the main grid
+        @include grid-column(3);
+    }
+    div.column-2 {
+        // just set the amount of spanned columns as the first parameter. rest can be left as default, because this is part of the main grid
+        @include grid-column(2);
+    }
+    div.inner-row {
+        $inner-width: $container-width / 2;
+        // we are dividing container width by 2, because inner row is inside main row's .column-6, which is exactly half the width of container
+        @include grid-row($inner-width);
+        div.inner-column {
+            // now we also need to set the second parameter, to set total amount of columns
+            // we also need to set the third parameter to match the container size so gutters match the parent grid
+            @include grid-column(1, 3, $inner-width);
+        }
+        div.inner-column-2 {
+            // now we also need to set the second parameter, to set total amount of columns
+            // we also need to set the third parameter to match the container size so gutters match the parent grid
+            @include grid-column(2, 3, $inner-width);
+        }
+    }
+}
+

@@ -1,0 +1,102 @@
+/*
+ * mnml grid system (SCSS version)
+ * @author Teemu Lahti <teemu.lahti@gmail.com>
+ */
+/**
+ * Mixin for grid rows.
+ * @param $width Width of the grid container element.
+ * @param $gutter The amount of margin between columns
+ */
+/**
+* Mixin for single grid columns
+* @param $spanColumns The width of the column in grid units
+* @param $totalColumns Total amount of columns in the grid
+* @param $width Width of the grid container element.
+* @param $gutter The amount of margin between columns
+*/
+html, body {
+  margin: 0;
+}
+
+div.container {
+  width: 950px;
+  background: url("../images/grid.png");
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+div.responsive-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+div.row {
+  *zoom: 1;
+  width: 101.05263%;
+  overflow: hidden;
+}
+div.row:before, div.row:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+div.row:after {
+  clear: both;
+}
+div.row div.column {
+  width: 7.29167%;
+  margin-right: 1.04167%;
+  float: left;
+  overflow: hidden;
+}
+div.row div.column-6 {
+  width: 48.95833%;
+  margin-right: 1.04167%;
+  float: left;
+  overflow: hidden;
+}
+div.row div.column-4 {
+  width: 32.29167%;
+  margin-right: 1.04167%;
+  float: left;
+  overflow: hidden;
+}
+div.row div.column-3 {
+  width: 23.95833%;
+  margin-right: 1.04167%;
+  float: left;
+  overflow: hidden;
+}
+div.row div.column-2 {
+  width: 15.625%;
+  margin-right: 1.04167%;
+  float: left;
+  overflow: hidden;
+}
+div.row div.inner-row {
+  *zoom: 1;
+  width: 102.10526%;
+  overflow: hidden;
+}
+div.row div.inner-row:before, div.row div.inner-row:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+div.row div.inner-row:after {
+  clear: both;
+}
+div.row div.inner-row div.inner-column {
+  width: 31.27148%;
+  margin-right: 2.06186%;
+  float: left;
+  overflow: hidden;
+}
+div.row div.inner-row div.inner-column-2 {
+  width: 64.60481%;
+  margin-right: 2.06186%;
+  float: left;
+  overflow: hidden;
+}
