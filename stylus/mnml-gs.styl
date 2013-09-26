@@ -1,0 +1,47 @@
+/*
+ * mnml grid system (LESS version)
+ *
+ * @author Teemu Lahti <teemu.lahti@gmail.com>
+ */
+
+// Default values. Set these to match your main grid.
+defaultColumns = 12
+defaultWidth = 950px
+defaultGutter = 10px
+
+clearfix()
+  *zoom 1
+  &:before,
+  &:after
+    content " " /* 1 */
+    display table /* 2 */
+
+  &:after
+    clear both
+
+/**
+ * Mixin for grid rows.
+ * @param @width Width of the grid container element.
+ * @param @gutter The amount of margin between columns
+ */
+grid-row(width = defaultWidth, gutter = defaultGutter)
+  clearfix()
+  width unit(((width + gutter) / width) * 100%, '%')
+  overflow hidden
+
+/**
+* Mixin for single grid columns
+* @param @spanColumns The width of the column in grid units
+* @param @totalColumns Total amount of columns in the grid
+* @param @width Width of the grid container element.
+* @param @gutter The amount of margin between columns
+*/
+grid-column(spanColumns = 1, totalColumns = defaultColumns, width = defaultWidth, gutter = defaultGutter)
+  total-width = width + gutter
+  column-width = (total-width / totalColumns) * spanColumns
+  gutter-width = gutter / total-width * 100%
+  width unit(((column-width / total-width) * 100%) - gutter-width, '%')
+  margin-right unit(gutter-width, '%')
+  float left
+  overflow hidden
+
