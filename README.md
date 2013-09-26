@@ -30,19 +30,12 @@ Below are some simple examples about setting up **mnml**. Examples directory in 
 	<body>
 		<div class="row">
 			<div class="col">
-					This column has a width of 1 grid units
-				</div>
-				<div class="col-2">
-					This column has a width of 2 grid units
-				</div>
-				<div class="col-9">
-					This column has a width of 9 grid units
-				</div>
+				This column has a width of 1 grid units
 			</div>
 			<div class="col-2">
 				This column has a width of 2 grid units
 			</div>
-			<div class="col-93">
+			<div class="col-9">
 				This column has a width of 9 grid units
 			</div>
 		</div>
