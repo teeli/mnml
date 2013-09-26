@@ -1,6 +1,6 @@
 # mnml
 
-**mnml** (pronounced *"minimal"*) is a tiny grid system for SASS (LESS and Stylus are coming soon).
+**mnml** (pronounced *"minimal"*) is a tiny grid system for SASS, LESS and Stylus.
 
 > 
 “Perfection is achieved, not when there is nothing more to add, but when there is nothing left to take away.” 
