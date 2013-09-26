@@ -45,7 +45,7 @@ Below are some simple examples about setting up **mnml**. Examples directory in 
 ### SCSS
 
 	// import grid system
-    @import mnml-gs.scss
+    @import mnml-gs
 
     .row {
 		// set up grid with width of 960px and gutter of 10px between each column
@@ -66,7 +66,25 @@ Below are some simple examples about setting up **mnml**. Examples directory in 
 
 ### LESS
 
-*todo*
+	// import grid system
+    @import mnml-gs.less
+
+    .row {
+		// set up grid with width of 960px and gutter of 10px between each column
+		.grid-row(960px, 10px);
+		.col {
+			// define a column with a width of 1 column out of 12
+			.grid-column(1, 12, 960px, 10px);
+		}
+		.col-2 {
+			// define a column with a width of 2 columns out of 12
+			.grid-column(2, 12, 960px, 10px);
+		}
+		.col-9 {
+			// define a column with a width of 9 columns out of 12
+			.grid-column(9, 12, 960px, 10px);
+		}
+	}
 
 ### Stylus
 
