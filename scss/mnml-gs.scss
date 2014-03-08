@@ -5,9 +5,9 @@
  */
  
 // Default values. Set these to match your main grid.
-$defaultColumns: 12;
-$defaultWidth: 950px;
-$defaultGutter: 10px;
+$defaultColumns: 12 !default;
+$defaultWidth: 950px !default;
+$defaultGutter: 10px !default;
 
 @mixin clearfix() {
   *zoom: 1;
