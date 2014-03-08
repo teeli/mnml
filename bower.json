@@ -1,0 +1,17 @@
+{
+  "name": "mnml-gs",
+  "version": "1.0.0",
+  "main": [
+    "scss/mnml-gs.scss",
+    "less/mnml-gs.less",
+    "stylus/mnml-gs.styl"
+  ],
+  "ignore": [
+    ".idea",
+    ".sass-cache"
+  ],
+  "dependencies": {
+  },
+  "devDependencies": {
+  }
+}
